@@ -2,10 +2,12 @@
 
 ## 1.1 Jelenlegi helyzet
 
-A StudyUp mint ötlet úgy vetődött fel, hogy belegondoltunk abba, hogy mikor még mi voltunk kisebbek és általános iskolában vagy gimnáziumban tanultunk,
-sokszor azon kaptuk magunkat, hogy nincsen, ami motiválna a tanulásra minket. Ezért gondoltuk, hogy az újabb generáció számára tökéletes lehetőség lenne
-ezen alkalmazás vagy weboldal használatával tanulni. Nem csak fejlesztené a diákokat, hanem tananyagok sikeres elvégzésével jutalmakat kaphatnak,
-amik arra ösztönözzék őket, hogy tanuljanak.
+A ***StudyUp*** mint ötlet úgy vetődött fel, hogy belegondoltunk abba, hogy mikor még mi voltunk kisebbek, és általános iskolában vagy gimnáziumban tanultunk,
+sokszor azon kaptuk magunkat, hogy nincsen, ami motiválna a tanulásra minket. Ez egy általános probléma a diákok körében, és sok esetben ez a motiválatlanság az oka, hogy nehezen megy a tanulás, de sok esetben akár a pedagógus hibájából is adódhat, aki nem gyakorol eleget a tanulókkal, így a diákoknak nincsen visszajelzésük az addigi teljesítményükről. 
+Ezért gondoltuk, hogy az újabb generáció számára tökéletes lehetőség lenne ezen alkalmazás vagy weboldal használatával tanulni, aminek célja, hogy a diákok hatékonyan és játékosan tanulhassanak, mégpedig úgy, hogy teszteket tölthetnének ki, tantárgyak és évfolyamok szerint kategorizálva. 
+Nem csak fejlesztené a diákokat, hanem a tesztek sikeres elvégzésével jutalmakat kaphatnak, amik arra ösztönöznék őket, hogy tanuljanak, és még többet gyakoroljanak.
+Emellett még tartalmazna egy rangsort, ami iskolákra lenne bontva, és lehetne egymással versenyezni, ez pedig azoknak nagyon jó hatással lehet a teljesítményükre, akikben megvan a versenyszellem.
+Az alkalmazás használatához mindössze regisztrációra van szükséges.
 
 ## 1.2 Vágyálomrendszer
 
