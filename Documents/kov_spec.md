@@ -1,4 +1,4 @@
-#Követelmény specifikációk
+# Követelmény specifikációk
 
 1.1 Jelenlegi helyzet
 
