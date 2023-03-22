@@ -9,7 +9,7 @@ Ezért gondoltuk, hogy az újabb generáció számára tökéletes lehetőség l
 Nem csak fejlesztené a diákokat, hanem a tesztek sikeres elvégzésével jutalmakat kaphatnak, amik arra ösztönöznék őket, hogy tanuljanak, és még többet gyakoroljanak.
 Emellett még tartalmazna egy rangsort, ami iskolákra lenne bontva, és lehetne egymással versenyezni, ez pedig azoknak nagyon jó hatással lehet a teljesítményükre, akikben megvan a versenyszellem.
 
-Az alkalmazás használatához mindössze regisztrációra van szükséges.
+Az alkalmazás használatához mindössze regisztrációra van szükség.
 
 ## 1.2 Vágyálomrendszer
 
