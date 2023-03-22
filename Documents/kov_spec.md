@@ -40,3 +40,7 @@ Az alkalmazás használatához mindössze regisztrációra van szükséges.
   - Hol tart a tananyagokban?
   - Jutalmak
   - Szintlépések
+
+## 1.6 Rendszerre vonatkozó szabályok
+
+- A web felület: html/css/javascript. A képek jpeg és png formátumúak lehetnek.  
