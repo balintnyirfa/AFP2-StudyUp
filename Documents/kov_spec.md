@@ -22,6 +22,10 @@ Az alkalmazás használatához mindössze regisztrációra van szükség.
 + Játékos megközelítés jellemezze, amihez a kinézetnek igazodnia kell
 + Frissítés és karbantartás heti rendszerességgel
 
+## 1.3 Jelenlegi üzleti folyamatok
+
+Manapság sok oldal és aplikáció van amin azt kívánja hogy feltud készíteni éretségire. Ezen termékekből rengeteg van de egyik sem képes a tananyagokat egybe hozni. Külön-külön akarják ábrázolni a feladatokat. Csak matekot, csaak informatikát vagy csak fizikát akarnak megtanítani viszont így mi lessz a többi résszel az éretségin?Mi erre hozzuk a megoldást. Nem kell 26 különböző aplikációt letölteni készülénkeikre, csak egyett.
+
 ## 1.4 Igényelt üzleti folyamatok
 
 - Online felület
