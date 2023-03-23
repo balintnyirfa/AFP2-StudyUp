@@ -10,6 +10,10 @@ A tananyagok sikeres elvégzésével jutalmakat kaphatnak a diákok.
 - Kiválasztható tananyagok közül lehet válogatni, melyek kategóriákra vannak bontva
 - Igényes megjelenés
 
+## 2.2 Feltételek
+
+A weboldal és az aplikáció a React Native programozási nyelven lesz programozva. Az adatbázis Firebase-ben lesznek eltárolva, mely továbbá a szoftver biztosít 100 alap felhasználót és 5 GB Cloud Service-t.
+
 ## 2.3 Használati esetek
 
 3 szerepkört határozhatunk meg: az ***admint***, a ***regisztrált felhasználót*** és a ***vendéget***.
