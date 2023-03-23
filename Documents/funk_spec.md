@@ -12,7 +12,7 @@ A tananyagok sikeres elvégzésével jutalmakat kaphatnak a diákok.
 
 ## 2.2 Feltételek
 
-A weboldal és az aplikáció a React Native programozási nyelven lesz programozva. Az adatbázis Firebase-ben lesznek eltárolva, mely továbbá a szoftver biztosít 100 alap felhasználót és 5 GB Cloud Service-t.
+A weboldal és az aplikáció a HTML programozási nyelven lesz programozva és a funkciók a JavaScriptben lesznek írva. A React Native JavaSript keretrendszert használjuk. Az adatbázis Firebase-ben lesznek eltárolva, mely továbbá a szoftver biztosít 100 alap felhasználót és 5 GB Cloud Service-t.
 
 ## 2.3 Használati esetek
 
