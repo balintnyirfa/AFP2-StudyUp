@@ -10,3 +10,8 @@ Az alkalmazás működik webes felületen, illetve Androidon és iOS-en is. Az i
   - React Native
   - Visual Studio Code
   - Firebase
+
+## 3.11 Karbantartási terv
+
+- A weboldal frissítési jogát fenntartjuk.
+- Az oldal helyes működésének heti rendszerességgel történő ellenőrzése.
