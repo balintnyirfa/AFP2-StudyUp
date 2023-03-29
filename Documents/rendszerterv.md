@@ -11,6 +11,10 @@ A projektet weblapon is valósítjuk meg, továbbá mobilos alkalmazás is tarto
   - A frontend fejlesztők célja hogy egy könnyen átlátható, igényes, felhasználóbarát felületet hozzanak létre.
   - A backend fejlesztők feladata, a háttérben zajló folyamatok leprogramozása, JavaScript kód megírása, a program helyes működésének biztosítása, és az eredmény     kiértékelése.
 
+## 3.3 Üzleti folyamatok modellje
+
+![My Image](Képek/uzleti_modell.jpg)
+
 ## 3.4 Követelmények
 
 A weboldal létrehozásához HTML/CSS illetve JavaScriptet használtunk. Továbbá a JavaScript-et React keretrendszerben használjuk. A felépítés és dizájnolás HTML és CSS implementálásával történik. Az oldal teljes értékű felhasználására elegendő egy egyszerű internetes böngészőt indítanunk. Az alkalmazások react Native-ben kerülnek megírásra.
