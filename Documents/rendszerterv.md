@@ -1,5 +1,9 @@
 # Rendszerterv
 
+## 3.1 A rendszer célja
+
+A rendszer célja az, hogy a felhasználók különböző tesztek kitöltésével bővíthessék a tudásukat, versenyezhessenek egymással, vagy csak szimplán szórakoztató jellege miatt használhassák az alkalmazást. Az alkalmazás igényes, figyelemfelkeltő megjelenésével szeretnénk ösztönözni az embereket ennek használatára. A tesztek kitöltése után pontszámokat lehet gyűjteni, ezáltal elérhető egy bizonyos kompetencia a regisztrált felhasználók közt.
+
 ## 3.2 Projektterv
 
 A projektet weblapon is valósítjuk meg, továbbá mobilos alkalmazás is tartozik a StudyUp projecthez. A mobilos alkalmazás mind a két fő platformot(Android, iOS) le fogja fedni. Ezen felületeknek van egyaránt frontend és backend része. Az egyes feladatokat többségében külön emberek végzik. A frontend fejlesztésére HTML-t és CSS-t alkalmazunk a webes felületen, míg az alkalmazásnál React Native-et használunk. A háttér adatokat a Firebase-ben kerülnek eltárolásban.
