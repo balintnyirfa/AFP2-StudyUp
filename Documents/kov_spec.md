@@ -29,12 +29,15 @@ Manapság sok oldal és aplikáció van amin azt kívánja hogy feltud készíte
 ## 1.4 Igényelt üzleti folyamatok
 
 - Online felület
-- Felhasználói fiók létrehozása
+- Felhasználói fiók létrehozása, módosítása
 - Adatbázis használata:
 	- felhasználók,
 	- tananyagok,
 	- válaszok eltárolása
 - Jutalomrendszer
+- Rangsor
+- Szintek
+- Webes felületen, Androidon és iOS-en is elérhető legyen
 
 ## 1.5 Követelmény lista
 
