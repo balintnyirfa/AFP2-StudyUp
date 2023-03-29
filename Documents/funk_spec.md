@@ -33,3 +33,7 @@ A weboldal és az aplikáció a HTML programozási nyelven lesz programozva és 
 
 **Vendég:**
 - regisztráció szükséges az alkalmazás használatához
+
+## 2.4 Forgatókönyvek
+
+Kérdőíveket csak beregisztrált felhasználó tudja elérni és kitölteni, vendégként nem használhatja az alkalmazást. A felhasználó nem módosíthatja a már létrehozott kvízeket, valamint nem is adhat hozzá újat, ezt csak az admin teheti meg.
