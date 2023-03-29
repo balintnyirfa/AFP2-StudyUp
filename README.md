@@ -1,12 +1,12 @@
 # AFP2-StudyUp
 Tanulást segítő alkalmazás - iOS, Android, web
 
-***Fejlesztők:***
+## ***Fejlesztők:***
 
-## Senior
+### Senior
   Erdélyi Roland
   
-## Juniorok
+### Juniorok
   Cs. Nagy Dávid Endre
   
   Deli Daniella
