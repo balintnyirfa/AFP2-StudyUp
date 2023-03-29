@@ -30,6 +30,11 @@ Az alkalmazás működik webes felületen, illetve Androidon és iOS-en is. Az i
 
 Android-ra és IOS-re készül a telefonos alkalmazás. Viszont webböngészőből is elérhető lesz, így telepítése nem feltétlen szükséges.
 
+## 3.10 Implementációs terv
+
+A Webes felület főként HTML, CSS, és Javascript nyelven fog készülni. A Javasriptet a React Native keretrendszeren belül használjuk. Ezeket a technológiákat amennyire csak lehet külön fájlokba írva készítjük, és úgy fogjuk egymáshoz csatolni a jobb átláthatóság érdekében. 
+Az Android valamint az IOS alkalmazás a React Native keretrendszerrel készül.
+
 ## 3.11 Karbantartási terv
 
 - A weboldal frissítési jogát fenntartjuk.
