@@ -30,23 +30,26 @@ Manapság sok oldal és aplikáció van amin azt kívánja hogy feltud készíte
 
 - Online felület
 - Felhasználói fiók létrehozása, módosítása
-- Adatbázis használata:
-	- felhasználók,
-	- tananyagok,
-	- válaszok eltárolása
+- Tesztek kilistázása kategóriák (osztályok, tantárgyak) szerint
+- Tesztek kitöltése
 - Jutalomrendszer
 - Rangsor
 - Szintek
-- Webes felületen, Androidon és iOS-en is elérhető legyen
 
 ## 1.5 Követelmény lista
 
 - Reszponzív felület
 - Játékos, színes UI
+- Adatbázis használata:
+  - felhasználók,
+  - tananyagok,
+  - válaszok eltárolása
 - Könnyű nyomonkövethetőség az előrelépésekben
-  - Hol tart a tananyagokban?
+  - Hol tart a tesztekben?
   - Jutalmak
   - Szintlépések
+  - Rangsor iskolák szerint
+- Webes felületen, Androidon és iOS-en is elérhető legyen
 
 ## 1.6 Rendszerre vonatkozó szabályok
 
