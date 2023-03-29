@@ -10,6 +10,10 @@ Az alkalmazás működik webes felületen, illetve Androidon és iOS-en is. Az i
   - React Native
   - Visual Studio Code
   - Firebase
+ 
+## 3.9 Telepítési terv
+
+Android-ra és IOS-re készül a telefonos alkalmazás. Viszont webböngészőből is elérhető lesz, így telepítése nem feltétlen szükséges.
 
 ## 3.11 Karbantartási terv
 
