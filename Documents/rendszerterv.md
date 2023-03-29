@@ -25,6 +25,7 @@ Az alkalmazás működik webes felületen, illetve Androidon és iOS-en is. Az i
   - React Native
   - Visual Studio Code
   - Firebase
+  - Figma
  
 ## 3.9 Telepítési terv
 
