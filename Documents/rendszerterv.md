@@ -19,6 +19,11 @@ A projektet weblapon is valósítjuk meg, továbbá mobilos alkalmazás is tarto
 
 A weboldal létrehozásához HTML/CSS illetve JavaScriptet használtunk. Továbbá a JavaScript-et React keretrendszerben használjuk. A felépítés és dizájnolás HTML és CSS implementálásával történik. Az oldal teljes értékű felhasználására elegendő egy egyszerű internetes böngészőt indítanunk. Az alkalmazások react Native-ben kerülnek megírásra.
 
+## 3.5 Funkcionális terv Rendszerszereplők:
+
+Felhasználó: Betud jelentkezni. Továbbá teszteket tud kitölteni.
+Vendég: Regisztrálni tud.
+
 ## 3.6 Fizikai környezet
 
 Az alkalmazás működik webes felületen, illetve Androidon és iOS-en is. Az igénybevételéhez szükség van regisztrációhoz, anélkül nincs lehetőség a tesztek megtekintésére és kitöltésére.
