@@ -36,4 +36,5 @@ A weboldal és az applikáció a HTML programozási nyelven lesz programozva, é
 
 ## 2.4 Forgatókönyvek
 
-Kérdőíveket csak beregisztrált felhasználó tudja elérni és kitölteni, vendégként nem használhatja az alkalmazást. A felhasználó nem módosíthatja a már létrehozott kvízeket, valamint nem is adhat hozzá újat, ezt csak az admin teheti meg.
+Az alkalmazást csak beregisztrált felhasználó használhatja bejelentkezés után. Kitudja tölteni az összes adatbázisba feltöltött kvízt, de ezeket nem tudja módosítani, valamint új kvízt sem tud létrehozni. A felhasználó rendelkezik egy a saját adatlappal, amin az eredményeit tudja megtekinteni valamint az adatait is. 
+Az admin képes csak hozzáadni új kvízt, valamint módosítani a már hozzáadottakat. 
