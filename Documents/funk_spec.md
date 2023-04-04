@@ -41,4 +41,5 @@ Az admin képes csak hozzáadni új kvízt, valamint módosítani a már hozzáa
 
 ## 2.5 Képernyőtervek
 Bejelentkezés:
+
 ![My Image](Képernyőtervek/StudyUp-Login.png)
