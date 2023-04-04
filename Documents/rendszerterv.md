@@ -2,7 +2,7 @@
 
 ## 3.1 A rendszer célja
 
-A rendszer célja az, hogy a felhasználók különböző tesztek kitöltésével bővíthessék a tudásukat, versenyezhessenek egymással, vagy csak szimplán szórakoztató jellege miatt használhassák az alkalmazást. Az alkalmazás igényes, figyelemfelkeltő megjelenésével szeretnénk ösztönözni az embereket ennek használatára. A tesztek kitöltése után pontszámokat lehet gyűjteni, ezáltal elérhető egy bizonyos kompetencia a regisztrált felhasználók közt.
+A rendszer célja az, hogy a felhasználók különböző tesztek kitöltésével bővíthessék a tudásukat, versenyezhessenek egymással, vagy csak szimplán szórakoztató jellege miatt használhassák az alkalmazást. Az alkalmazás igényes, figyelemfelkeltő megjelenésével szeretnénk ösztönözni az embereket ennek használatára. A tesztek kitöltése után pontszámokat lehet gyűjteni, ezáltal elérhető egy bizonyos kompetencia a regisztrált felhasználók közt. Teljesítményét a toplistán is megtekintheti. Fontos, hogy a felhasználó könnyen el tudjon igazodni a felületeken ezért minimalista felhasználói felületet kap a program. A rendszer használható Androidos illetve IOS eszközökön, alkalmazás formájában, valamint webes felületen is elérhető.
 
 ## 3.2 Projektterv
 
@@ -53,9 +53,10 @@ A teszt elsődleges célja: az eddig meglévő funkcióknak a különböző bön
 ## 3.9 Telepítési terv
 
 Android-ra és IOS-re illetve webes felületre készítjük az alkalmazásunkat.
-Telefonos alkalmazás esetén:
+
+-Telefonos alkalmazás esetén:
   - Töltse le az alkalmazást a Google áruházból vagy App Store-ból, adja meg a szükséges engedélyeket és telepítse a programot.
-Webfelület esetén:
+- Webfelület esetén:
   - A szoftver webes felületéhez csak egy ajánlott böngésző telepítése szükséges (Google Chrome, Firefox, Opera, Safari), külön szoftver nem kell hozzá. A webszerverre
     közvetlenül az internetről kapcsolódnak rá a kliensek.
 
