@@ -43,3 +43,7 @@ Az admin képes csak hozzáadni új kvízt, valamint módosítani a már hozzáa
 Bejelentkezés:
 
 ![My Image](Képernyőtervek/StudyUp-Login.png)
+
+Regisztráció:
+
+![My Image](Képernyőtervek/StudyUp-Register.png)
