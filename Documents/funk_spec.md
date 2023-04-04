@@ -40,10 +40,11 @@ Az alkalmazást csak beregisztrált felhasználó használhatja bejelentkezés u
 Az admin képes csak hozzáadni új kvízt, valamint módosítani a már hozzáadottakat. 
 
 ## 2.5 Képernyőtervek
-Bejelentkezés:
+
+#### Bejelentkezés:
 
 ![My Image](Képernyőtervek/StudyUp-Login.png)
 
-Regisztráció:
+#### Regisztráció:
 
 ![My Image](Képernyőtervek/StudyUp-Register.png)
