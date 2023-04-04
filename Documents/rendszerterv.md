@@ -35,6 +35,12 @@ Az alkalmazás működik webes felületen, illetve Androidon és iOS-en is. Az i
   - Visual Studio Code
   - Firebase
   - Figma
+
+## 3.8 Tesztterv
+A teszt elsődleges célja: az eddig meglévő funkcióknak a különböző böngészőkkel való kompatibilitásának tesztelése.
+ - Metódusok megfelelően működnek-e.
+ - Különböző böngészőkkel való tesztelés (Edge, Google Chrome).
+ - Android illetve IOS operációsrendszeren való tesztelés.
  
 ## 3.9 Telepítési terv
 
