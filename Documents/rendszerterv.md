@@ -68,3 +68,6 @@ Az Android, valamint az IOS alkalmazás a React Native keretrendszerrel készül
 
 - A weboldal frissítési jogát fenntartjuk.
 - Az oldal helyes működésének heti rendszerességgel történő ellenőrzése.
+- Ellenőrizzük, hogy a jövőben kiadott Android verziókkal kompatibilis-e az alkalmazás.
+- Karbantartás során a programhibákat elhárítjuk. 
+- Igények vagy környezeti feltételek megváltozása miatt a programunkat módosítjuk.
