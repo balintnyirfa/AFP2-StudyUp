@@ -54,4 +54,7 @@ Mi erre hozzuk a megoldást. Nem kell 26 különböző applikációt letölteni 
 
 ## 1.6 Rendszerre vonatkozó szabályok
 
-- A web felület: html/css/javascript. A képek jpeg és png formátumúak lehetnek.  
+- A web felület: html/css/javascript. 
+- A képek jpeg és png formátumúak lehetnek. 
+- A rendszer legyen intuitív, egyértelmű
+- A rendszer bíztosítsa a kérdőívet kitöltő személy teljes anonimítását
