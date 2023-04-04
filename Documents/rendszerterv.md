@@ -39,7 +39,7 @@ Az alkalmazás működik webes felületen, illetve Androidon és iOS-en is. Az i
 
 ## 3.7 Adatbázis terv
 
-![My_Image](Képek/adatbazis_terv.drawio.png)
+![My_Image](Képek/adatbazis_terv.png)
 
 ## 3.8 Tesztterv
 A teszt elsődleges célja: az eddig meglévő funkcióknak a különböző böngészőkkel való kompatibilitásának tesztelése.
