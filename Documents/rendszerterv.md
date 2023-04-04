@@ -21,8 +21,9 @@ A weboldal létrehozásához HTML/CSS illetve JavaScriptet használtunk. Tovább
 
 ## 3.5 Funkcionális terv Rendszerszereplők:
 
-Felhasználó: Betud jelentkezni. Továbbá teszteket tud kitölteni.
-Vendég: Regisztrálni tud.
+- Admin:Be tud jelentkezni és ki tud jelentkezni. Modosítani a teszteket. felhasználói adatbázishoz hozzá férni. Saját adatokat módosítani. Ranglista megtekinteni.
+- Felhasználó: Betud jelentkezni. Továbbá teszteket tud kitölteni. Előtud fizetni. Ranglistát tud nézni. Sajátadatokat módosítani.
+- Vendég: Regisztrálni tud.
 
 ## 3.6 Fizikai környezet
 
