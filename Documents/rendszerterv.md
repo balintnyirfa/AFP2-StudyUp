@@ -45,9 +45,10 @@ Az alkalmazás működik webes felületen, illetve Androidon és iOS-en is. Az i
 
 ## 3.8 Tesztterv
 A teszt elsődleges célja: az eddig meglévő funkcióknak a különböző böngészőkkel való kompatibilitásának tesztelése.
- - Metódusok megfelelően működnek-e.
- - Különböző böngészőkkel való tesztelés (Edge, Google Chrome).
- - Android, illetve IOS operációsrendszeren való tesztelés.
+ - Unit teszt: A tesztelés során arről győzödünk meg, hogy a megírt metódusok megfelelően működnek-e. Ennek megfelelően minden metódushoz írunk egy-egy unit tesztet.
+ - Alfa teszt:az eddig meglévő funkcióknak a különböző böngészőkkel (Edge, Google Chrome) való kompatibilitásának tesztelése. Android, illetve IOS operációsrendszeren    való tesztelés.
+ - Emellett még teszteljük, hogy az az adatbázisban hozzá tudunk adni új adatokat, valamint megfelelően tudjuk kiolvasni a már feltöltött adatokat.
+ - Teszteljük a regisztráció illetve a bejelentkezés oldalát, hogy az elvártaknak megfelelően működjön. Bejelentkezésnél vagy regisztrációnál hibás adatok esetén a        felhasználó hibaüzenetet kap.
  
 ## 3.9 Telepítési terv
 
