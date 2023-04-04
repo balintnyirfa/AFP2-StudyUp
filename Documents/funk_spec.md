@@ -38,3 +38,7 @@ A weboldal és az applikáció a HTML programozási nyelven lesz programozva, é
 
 Az alkalmazást csak beregisztrált felhasználó használhatja bejelentkezés után. Kitudja tölteni az összes adatbázisba feltöltött kvízt, de ezeket nem tudja módosítani, valamint új kvízt sem tud létrehozni. A felhasználó rendelkezik egy a saját adatlappal, amin az eredményeit tudja megtekinteni valamint az adatait is. 
 Az admin képes csak hozzáadni új kvízt, valamint módosítani a már hozzáadottakat. 
+
+## 2.5 Képernyőtervek
+Bejelentkezés:
+![My Image](Képernyőtervek/StudyUp-Login.png)
