@@ -52,7 +52,12 @@ A teszt elsődleges célja: az eddig meglévő funkcióknak a különböző bön
  
 ## 3.9 Telepítési terv
 
-Android-ra és IOS-re készül a telefonos alkalmazás. Viszont webböngészőből is elérhető lesz, így telepítése nem feltétlen szükséges.
+Android-ra és IOS-re illetve webes felületre készítjük az alkalmazásunkat.
+Telefonos alkalmazás esetén:
+  - Töltse le az alkalmazást a Google áruházból vagy App Store-ból, adja meg a szükséges engedélyeket és telepítse a programot.
+Webfelület esetén:
+  - A szoftver webes felületéhez csak egy ajánlott böngésző telepítése szükséges (Google Chrome, Firefox, Opera, Safari), külön szoftver nem kell hozzá. A webszerverre
+    közvetlenül az internetről kapcsolódnak rá a kliensek.
 
 ## 3.10 Implementációs terv
 
