@@ -2,7 +2,7 @@
 
 ## 2.1 Bevezetés
 
-A StudyUp-al azt szeretnénk elérni, hogy minél több diák ezt használva, nagyobb motivációval tanuljon esetleg meg is szeretve azt.
+A StudyUp-al azt szeretnénk elérni, hogy minél több diák ezt használva, nagyobb motivációval tanuljon, esetleg meg is szeretve azt.
 A játékos, színes felhasználói felületével szeretnénk ösztönözni a felhasználókat, hogy a mi alkalmazásunkat használják.
 A tananyagok sikeres elvégzésével jutalmakat kaphatnak a diákok.
 
@@ -12,7 +12,7 @@ A tananyagok sikeres elvégzésével jutalmakat kaphatnak a diákok.
 
 ## 2.2 Feltételek
 
-A weboldal és az aplikáció a HTML programozási nyelven lesz programozva és a funkciók a JavaScriptben lesznek írva. A React Native JavaSript keretrendszert használjuk. Az adatbázis Firebase-ben lesznek eltárolva, mely továbbá a szoftver biztosít 100 alap felhasználót és 5 GB Cloud Service-t.
+A weboldal és az applikáció a HTML programozási nyelven lesz programozva, és a funkciók JavaScriptben lesznek írva. A React Native JavaScript keretrendszert használjuk. Az adatbázis, táblák Firebase-ben lesznek eltárolva, mely továbbá a szoftver biztosít 100 alap felhasználót és 5 GB Cloud Service-t.
 
 ## 2.3 Használati esetek
 
@@ -36,4 +36,15 @@ A weboldal és az aplikáció a HTML programozási nyelven lesz programozva és 
 
 ## 2.4 Forgatókönyvek
 
-Kérdőíveket csak beregisztrált felhasználó tudja elérni és kitölteni, vendégként nem használhatja az alkalmazást. A felhasználó nem módosíthatja a már létrehozott kvízeket, valamint nem is adhat hozzá újat, ezt csak az admin teheti meg.
+Az alkalmazást csak beregisztrált felhasználó használhatja bejelentkezés után. Kitudja tölteni az összes adatbázisba feltöltött kvízt, de ezeket nem tudja módosítani, valamint új kvízt sem tud létrehozni. A felhasználó rendelkezik egy a saját adatlappal, amin az eredményeit tudja megtekinteni valamint az adatait is. 
+Az admin képes csak hozzáadni új kvízt, valamint módosítani a már hozzáadottakat. 
+
+## 2.5 Képernyőtervek
+
+#### Bejelentkezés:
+
+![My Image](Képernyőtervek/StudyUp-Login.png)
+
+#### Regisztráció:
+
+![My Image](Képernyőtervek/StudyUp-Register.png)

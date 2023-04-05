@@ -24,7 +24,8 @@ Az alkalmazás használatához mindössze regisztrációra van szükség.
 
 ## 1.3 Jelenlegi üzleti folyamatok
 
-Manapság sok oldal és aplikáció van amin azt kívánja hogy feltud készíteni éretségire. Ezen termékekből rengeteg van de egyik sem képes a tananyagokat egybe hozni. Külön-külön akarják ábrázolni a feladatokat. Csak matekot, csaak informatikát vagy csak fizikát akarnak megtanítani viszont így mi lessz a többi résszel az éretségin?Mi erre hozzuk a megoldást. Nem kell 26 különböző aplikációt letölteni készülénkeikre, csak egyett.
+Manapság sok oldal és applikáció van, aminek az a célja, hogy fel tud készíteni érettségire. Ezen termékekből rengeteg van, de egyik sem képes a tananyagokat egybe hozni. Külön-külön akarják ábrázolni a feladatokat. Csak matekot, csak informatikát vagy csak fizikát akarnak megtanítani, viszont így mi lesz a többi résszel az érettségin? 
+Mi erre hozzuk a megoldást. Nem kell 26 különböző applikációt letölteni készülékeinkre, csak egyet.
 
 ## 1.4 Igényelt üzleti folyamatok
 
@@ -53,4 +54,7 @@ Manapság sok oldal és aplikáció van amin azt kívánja hogy feltud készíte
 
 ## 1.6 Rendszerre vonatkozó szabályok
 
-- A web felület: html/css/javascript. A képek jpeg és png formátumúak lehetnek.  
+- A web felület: html/css/javascript. 
+- A képek jpeg és png formátumúak lehetnek. 
+- A rendszer legyen intuitív, egyértelmű
+- A rendszer bíztosítsa a kérdőívet kitöltő személy teljes anonimítását

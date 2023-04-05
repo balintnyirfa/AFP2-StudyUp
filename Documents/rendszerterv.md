@@ -2,7 +2,7 @@
 
 ## 3.1 A rendszer célja
 
-A rendszer célja az, hogy a felhasználók különböző tesztek kitöltésével bővíthessék a tudásukat, versenyezhessenek egymással, vagy csak szimplán szórakoztató jellege miatt használhassák az alkalmazást. Az alkalmazás igényes, figyelemfelkeltő megjelenésével szeretnénk ösztönözni az embereket ennek használatára. A tesztek kitöltése után pontszámokat lehet gyűjteni, ezáltal elérhető egy bizonyos kompetencia a regisztrált felhasználók közt.
+A rendszer célja az, hogy a felhasználók különböző tesztek kitöltésével bővíthessék a tudásukat, versenyezhessenek egymással, vagy csak szimplán szórakoztató jellege miatt használhassák az alkalmazást. Az alkalmazás igényes, figyelemfelkeltő megjelenésével szeretnénk ösztönözni az embereket ennek használatára. A tesztek kitöltése után pontszámokat lehet gyűjteni, ezáltal elérhető egy bizonyos kompetencia a regisztrált felhasználók közt. Teljesítményét a toplistán is megtekintheti. Fontos, hogy a felhasználó könnyen el tudjon igazodni a felületeken ezért minimalista felhasználói felületet kap a program. A rendszer használható Androidos illetve IOS eszközökön, alkalmazás formájában, valamint webes felületen is elérhető.
 
 ## 3.2 Projektterv
 
@@ -19,10 +19,12 @@ A projektet weblapon is valósítjuk meg, továbbá mobilos alkalmazás is tarto
 
 A weboldal létrehozásához HTML/CSS illetve JavaScriptet használtunk. Továbbá a JavaScript-et React keretrendszerben használjuk. A felépítés és dizájnolás HTML és CSS implementálásával történik. Az oldal teljes értékű felhasználására elegendő egy egyszerű internetes böngészőt indítanunk. Az alkalmazások react Native-ben kerülnek megírásra.
 
-## 3.5 Funkcionális terv Rendszerszereplők:
+## 3.5 Funkcionális terv 
 
-- Admin:Be tud jelentkezni és ki tud jelentkezni. Modosítani a teszteket. felhasználói adatbázishoz hozzá férni. Saját adatokat módosítani. Ranglista megtekinteni.
-- Felhasználó: Betud jelentkezni. Továbbá teszteket tud kitölteni. Előtud fizetni. Ranglistát tud nézni. Sajátadatokat módosítani.
+**Rendszerszereplők:**
+
+- Admin: Be tud jelentkezni és ki tud jelentkezni. Módosítani a teszteket. Felhasználói adatbázishoz hozzáférni. Saját adatokat módosítani. Ranglistát megtekinteni.
+- Felhasználó: Be tud jelentkezni. Továbbá teszteket tud kitölteni. Elő tud fizetni. Ranglistát tud megtekinteni. Saját adatokat módosítani.
 - Vendég: Regisztrálni tud.
 
 ## 3.6 Fizikai környezet
@@ -43,20 +45,30 @@ Az alkalmazás működik webes felületen, illetve Androidon és iOS-en is. Az i
 
 ## 3.8 Tesztterv
 A teszt elsődleges célja: az eddig meglévő funkcióknak a különböző böngészőkkel való kompatibilitásának tesztelése.
- - Metódusok megfelelően működnek-e.
- - Különböző böngészőkkel való tesztelés (Edge, Google Chrome).
- - Android illetve IOS operációsrendszeren való tesztelés.
+ - Unit teszt: A tesztelés során arről győzödünk meg, hogy a megírt metódusok megfelelően működnek-e. Ennek megfelelően minden metódushoz írunk egy-egy unit tesztet.
+ - Alfa teszt:az eddig meglévő funkcióknak a különböző böngészőkkel (Edge, Google Chrome) való kompatibilitásának tesztelése. Android, illetve IOS operációsrendszeren    való tesztelés.
+ - Emellett még teszteljük, hogy az az adatbázisban hozzá tudunk adni új adatokat, valamint megfelelően tudjuk kiolvasni a már feltöltött adatokat.
+ - Teszteljük a regisztráció illetve a bejelentkezés oldalát, hogy az elvártaknak megfelelően működjön. Bejelentkezésnél vagy regisztrációnál hibás adatok esetén a        felhasználó hibaüzenetet kap.
  
 ## 3.9 Telepítési terv
 
-Android-ra és IOS-re készül a telefonos alkalmazás. Viszont webböngészőből is elérhető lesz, így telepítése nem feltétlen szükséges.
+Android-ra és IOS-re illetve webes felületre készítjük az alkalmazásunkat.
+
+-Telefonos alkalmazás esetén:
+  - Töltse le az alkalmazást a Google áruházból vagy App Store-ból, adja meg a szükséges engedélyeket és telepítse a programot.
+- Webfelület esetén:
+  - A szoftver webes felületéhez csak egy ajánlott böngésző telepítése szükséges (Google Chrome, Firefox, Opera, Safari), külön szoftver nem kell hozzá. A webszerverre
+    közvetlenül az internetről kapcsolódnak rá a kliensek.
 
 ## 3.10 Implementációs terv
 
-A Webes felület főként HTML, CSS, és Javascript nyelven fog készülni. A Javasriptet a React Native keretrendszeren belül használjuk. Ezeket a technológiákat amennyire csak lehet külön fájlokba írva készítjük, és úgy fogjuk egymáshoz csatolni a jobb átláthatóság érdekében. 
-Az Android valamint az IOS alkalmazás a React Native keretrendszerrel készül.
+A Webes felület főként HTML, CSS, és Javascript nyelven fog készülni. A Javasrciptet a React Native keretrendszeren belül használjuk. Ezeket a technológiákat amennyire csak lehet külön fájlokba írva készítjük, és úgy fogjuk egymáshoz csatolni a jobb átláthatóság érdekében. 
+Az Android, valamint az IOS alkalmazás a React Native keretrendszerrel készül.
 
 ## 3.11 Karbantartási terv
 
 - A weboldal frissítési jogát fenntartjuk.
 - Az oldal helyes működésének heti rendszerességgel történő ellenőrzése.
+- Ellenőrizzük, hogy a jövőben kiadott Android verziókkal kompatibilis-e az alkalmazás.
+- Karbantartás során a programhibákat elhárítjuk. 
+- Igények vagy környezeti feltételek megváltozása miatt a programunkat módosítjuk.
