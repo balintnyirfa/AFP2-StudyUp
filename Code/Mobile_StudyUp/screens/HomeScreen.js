@@ -4,7 +4,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 const HomeScreen = () => {
     return (
       <View style={styles.container}>
-        <Text>HomeScreen</Text>
+        <Text>Lorem ipsum dolor sit amet, consectetur.</Text>
       </View>
     )
   }
