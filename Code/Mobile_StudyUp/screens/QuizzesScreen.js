@@ -10,7 +10,7 @@ const quizzes = [
   { id: 6, category: 'Történelem', title: 'I. világháború' },
 ];
 
-const QuizList = () => {
+const QuizzesScreen = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
 
   const renderItem = ({ item }) => (
@@ -68,7 +68,7 @@ const QuizList = () => {
   );
 };
 
-export default QuizList;
+export default QuizzesScreen;
 
 const styles = StyleSheet.create({
   container: {
