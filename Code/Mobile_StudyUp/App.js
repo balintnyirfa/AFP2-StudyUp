@@ -7,6 +7,7 @@ import RegisterScreen from './screens/RegisterScreen';
 import HomeScreen from './screens/HomeScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
 import QuizzesScreen from './screens/QuizzesScreen';
+import AccountScreen from './screens/AccountScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +37,16 @@ export default function App() {
             headerTintColor: '#8562AC'
           }} />
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen 
+          name="Account" 
+          component={AccountScreen}
+          options={{
+            title: '',
+            headerStyle: {
+              backgroundColor: '#fff'
+            },
+            headerTintColor: '#8562AC'
+          }} />
         <Stack.Screen name="Quizzes" component={QuizzesScreen} />
       </Stack.Navigator>
     </NavigationContainer>
