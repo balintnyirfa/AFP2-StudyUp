@@ -64,7 +64,8 @@ export default RegisterScreen
 const styles = StyleSheet.create ({
     Container: {
         flex: 1,
-        flexDirection: "column"
+        flexDirection: "column",
+        backgroundColor: '#fff'
     },
 
     InputContainer: {

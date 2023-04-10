@@ -29,7 +29,8 @@ export default WelcomeScreen
 const styles = StyleSheet.create({
     Container: {
         flex: 1,
-        flexDirection: 'column' 
+        flexDirection: 'column',
+        backgroundColor: '#fff'
     },
 
     TopContainer: {
