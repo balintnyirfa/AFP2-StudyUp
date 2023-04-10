@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View, Image, KeyboardAvoidingView, Pressable } from 'react-native';
 
 const WelcomeScreen = ({navigation}) => {
-    
     return (
         <View style={styles.Container}>
             <View style={styles.TopContainer}>
@@ -13,7 +12,7 @@ const WelcomeScreen = ({navigation}) => {
             </View>
             <View style={styles.ButtonContainer}>
                 <TouchableOpacity>
-                    <Pressable style={styles.RegisterButton}>
+                    <Pressable style={styles.RegisterButton} onPress={() => navigation.navigate('Register')}>
                         <Text style={styles.RegisterButtonText}>KEZDÉS</Text>
                     </Pressable>
                     <Pressable style={styles.LoginButton} onPress={() => navigation.navigate('Login')}>
