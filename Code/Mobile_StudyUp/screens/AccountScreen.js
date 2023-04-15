@@ -61,7 +61,7 @@ const AccountScreen = () => {
 
       <View style={styles.buttonContainer}>
       <Pressable style={styles.saveButton} >
-        <Text style={styles.btnText} onPress={handleSave}>Mentés</Text>
+        <Text style={styles.btnText} onPress={handleSave}>Mentés ⏩ <i>nem biztos, hogy ide kell </i>🤔</Text>
       </Pressable>
       </View>
 
