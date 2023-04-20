@@ -1,9 +1,21 @@
-import React, { useEffect, useState } from 'react'
-import { KeyboardAvoidingView, Image, Pressable, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import React, { useState } from 'react';
+import { KeyboardAvoidingView, Image, Pressable, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { auth, getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 const LoginScreen = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  //const auth = getAuth();
+
+  const signIn = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      console.log(userCredential);
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
 
   return (
     <KeyboardAvoidingView style={styles.container}>
@@ -12,12 +24,14 @@ const LoginScreen = () => {
           placeholder="Email"
           value={email}
           onChangeText={text => setEmail(text)}
+          onChange={(e) => setEmail(e.target.value)}
           style={styles.inputTop}
         />
         <TextInput
           placeholder="Password"
           value={password}
           onChangeText={text => setPassword(text)}
+          onChange={(e) => setPassword(e.target.value)}
           style={styles.inputBottom}
           secureTextEntry
         />
@@ -25,7 +39,7 @@ const LoginScreen = () => {
 
       <View style={styles.buttonContainer}>
         <TouchableOpacity>
-          <Pressable style={styles.loginButton}>
+          <Pressable style={styles.loginButton} onPress={signIn}>
             <Text style={styles.loginButtonText}>BEJELENTKEZÉS</Text>
           </Pressable>
         </TouchableOpacity>

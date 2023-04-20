@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View, Image, KeyboardAvoidingView, Pressable, TextInput } from 'react-native';
 
 const RegisterScreen = ({navigation}) => {
-    const [email, onChangeEmail] = React.useState('');
-    const [text, onChangeUserName] = React.useState('');
-    const [password, onChangePassword] = React.useState('');
-    const [passwordAgain, onChangePasswordAgain] = React.useState('');
+    const [email, setChangeEmail] = useState('');
+    const [text, setChangeUserName] = useState('');
+    const [password, setChangePassword] = useState('');
+    const [passwordAgain, setChangePasswordAgain] = useState('');
 
     return (
         <SafeAreaView style={styles.Container}>
@@ -14,26 +14,26 @@ const RegisterScreen = ({navigation}) => {
                     style={styles.InputTop}
                     placeholder="Email"
                     value={email}
-                    onChangeText={onChangeEmail}
+                    onChangeText={setChangeEmail}
                 />
                 <TextInput
                     style={styles.Input}
                     placeholder="Felhasználó név"
                     value={text}
-                    onChangeText={onChangeUserName}
+                    onChangeText={setChangeUserName}
                 />
                 <TextInput
                     style={styles.Input}
                     placeholder="Jelszó"
                     value={password}
-                    onChangeText={onChangePassword}
+                    onChangeText={setChangePassword}
                     secureTextEntry
                 />
                 <TextInput
                     style={styles.InputBottom}
                     placeholder="Jelszó újra"
                     value={passwordAgain}
-                    onChangeText={onChangePasswordAgain}
+                    onChangeText={setChangePasswordAgain}
                     secureTextEntry
                 />
             </View>

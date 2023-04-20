@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getDatabase, ref, set } from "firebase/database";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDATBpeUnKBRHxYo1yNCtwxtmPrwWyY3gk",
@@ -13,14 +12,17 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getDatabase();
+
+export const auth = getAuth(app);
+
+/*const db = getDatabase();
 const reference = ref(db, 'users/' + userId);
 
 set(reference, {
   username: username,
   email: email,
   password: password
-});
+});*/ 
 
 // Initialize Firebase
 //let app;
