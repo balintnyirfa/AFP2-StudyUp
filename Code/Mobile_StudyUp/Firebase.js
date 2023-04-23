@@ -11,9 +11,9 @@ const firebaseConfig = {
   measurementId: "G-2C8N82XE7E"
 };
 
-const app = initializeApp(firebaseConfig);
+//const app = initializeApp(firebaseConfig);
 
-export const auth = getAuth(app);
+//export const auth = getAuth(app);
 
 /*const db = getDatabase();
 const reference = ref(db, 'users/' + userId);
@@ -25,13 +25,13 @@ set(reference, {
 });*/ 
 
 // Initialize Firebase
-//let app;
-//if (firebase.apps.length === 0) {
-//  app = firebase.initializeApp(firebaseConfig);
-//} else {
-//  app = firebase.app()
-//}
-//
-//const auth = firebase.auth()
-//
-//export { auth };
+let app;
+if (firebase.apps.length === 0) {
+  app = firebase.initializeApp(firebaseConfig);
+} else {
+    app = firebase.app()
+}
+
+const auth = firebase.auth()
+
+export { auth };
