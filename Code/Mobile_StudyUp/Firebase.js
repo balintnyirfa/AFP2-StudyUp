@@ -1,9 +1,10 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDATBpeUnKBRHxYo1yNCtwxtmPrwWyY3gk",
   authDomain: "studyup-258d0.firebaseapp.com",
+  databaseURL: "https://studyup-258d0-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "studyup-258d0",
   storageBucket: "studyup-258d0.appspot.com",
   messagingSenderId: "169603880209",
@@ -14,24 +15,3 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
-
-/*const db = getDatabase();
-const reference = ref(db, 'users/' + userId);
-
-set(reference, {
-  username: username,
-  email: email,
-  password: password
-});*/ 
-
-// Initialize Firebase
-//let app;
-//if (firebase.apps.length === 0) {
-//  app = firebase.initializeApp(firebaseConfig);
-//} else {
-//  app = firebase.app()
-//}
-//
-//const auth = firebase.auth()
-//
-//export { auth };
