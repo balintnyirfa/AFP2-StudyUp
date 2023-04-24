@@ -1,9 +1,10 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDATBpeUnKBRHxYo1yNCtwxtmPrwWyY3gk",
   authDomain: "studyup-258d0.firebaseapp.com",
+  databaseURL: "https://studyup-258d0-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "studyup-258d0",
   storageBucket: "studyup-258d0.appspot.com",
   messagingSenderId: "169603880209",

@@ -1,11 +1,24 @@
 import React, { useState } from "react";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View, Image, KeyboardAvoidingView, Pressable, TextInput } from 'react-native';
+import { auth } from '../Firebase';
 
 const RegisterScreen = ({navigation}) => {
-    const [email, setChangeEmail] = useState('');
-    const [text, setChangeUserName] = useState('');
-    const [password, setChangePassword] = useState('');
-    const [passwordAgain, setChangePasswordAgain] = useState('');
+    const [email, setEmail] = useState('');
+    //const [text, setName] = useState('');
+    const [password, setPassword] = useState('');
+    // [passwordAgain, setChangePasswordAgain] = useState('');
+
+    const signUp = (e) => {
+        e.preventDefault();
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          console.log(userCredential);
+          //navigation.navigate(LoginScreen);
+        }).catch((error) => {
+          console.log(error);
+        });
+      }
 
     return (
         <SafeAreaView style={styles.Container}>
@@ -14,33 +27,37 @@ const RegisterScreen = ({navigation}) => {
                     style={styles.InputTop}
                     placeholder="Email"
                     value={email}
-                    onChangeText={setChangeEmail}
+                    onChangeText={setEmail}
+                    onChange={(e) => setEmail(e.target.value)}
                 />
+                {/*}
                 <TextInput
                     style={styles.Input}
                     placeholder="Felhasználó név"
                     value={text}
                     onChangeText={setChangeUserName}
-                />
+                />*/}
                 <TextInput
                     style={styles.Input}
                     placeholder="Jelszó"
                     value={password}
-                    onChangeText={setChangePassword}
+                    onChangeText={setPassword}
+                    onChange={(e) => setPassword(e.target.value)}
                     secureTextEntry
                 />
+                {/*}
                 <TextInput
                     style={styles.InputBottom}
                     placeholder="Jelszó újra"
                     value={passwordAgain}
                     onChangeText={setChangePasswordAgain}
                     secureTextEntry
-                />
+                />*/}
             </View>
 
             <View style={styles.ButtonContainer}>
                 <TouchableOpacity>
-                    <Pressable style={styles.RegisterButton} /*onPress={() => navigation.navigate('Register')}*/>
+                    <Pressable style={styles.RegisterButton} onPress={signUp}>
                         <Text style={styles.RegisterButtonText}>REGISZTRÁCIÓ</Text>
                     </Pressable>
                     <Pressable style={styles.LoginButton} onPress={() => navigation.navigate('Login')}>
