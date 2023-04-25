@@ -64,11 +64,11 @@ const LoginScreen = () => {
             <Text style={styles.loginButtonText}>BEJELENTKEZÉS</Text>
           </Pressable>
         </TouchableOpacity>
-        <TouchableOpacity>
+        {/* <TouchableOpacity>
           <Pressable style={styles.passwordForgotButton} onPress={() => navigation.navigate('ForgotPassword')}>
             <Text style={styles.passwordForgotButtonText}>ELFELEJTETTEM A JELSZAVAM</Text>
           </Pressable>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
 
       <View style={styles.bottomContainer}>
