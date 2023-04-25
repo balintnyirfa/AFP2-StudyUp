@@ -3,6 +3,8 @@ import { KeyboardAvoidingView, Image, Pressable, StyleSheet, Text, TextInput, To
 import { useNavigation } from '@react-navigation/native';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../Firebase';
+import { useNavigation } from '@react-navigation/native';
+
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
@@ -29,12 +31,13 @@ const LoginScreen = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
-        //navigation.navigate('Home');
+        navigation.replace('Home');
       }).catch((error) => {
         console.log(error);
-        //AlertWindow(error);
+        AlertWindow(error);
       });
   }
+
 
   return (
     <KeyboardAvoidingView style={styles.container}>
