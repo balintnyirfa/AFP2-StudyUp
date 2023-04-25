@@ -52,7 +52,7 @@ export default function App() {
             headerTintColor: '#8562AC'
           }} />
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen}/>
+        {/* <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen}/> */}
         <Stack.Screen 
           name="Account" 
           component={AccountScreen}
