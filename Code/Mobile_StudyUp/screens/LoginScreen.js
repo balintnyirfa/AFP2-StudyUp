@@ -30,7 +30,7 @@ const LoginScreen = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
-        navigation.replace('Home');
+        navigation.navigate('Home');
       }).catch((error) => {
         console.log(error);
         AlertWindow(error);
