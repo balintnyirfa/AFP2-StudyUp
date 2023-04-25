@@ -3,7 +3,6 @@ import { KeyboardAvoidingView, Image, Pressable, StyleSheet, Text, TextInput, To
 import { useNavigation } from '@react-navigation/native';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../Firebase';
-import { useNavigation } from '@react-navigation/native';
 
 
 const LoginScreen = () => {
