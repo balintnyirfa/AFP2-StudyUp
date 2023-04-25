@@ -10,7 +10,7 @@ import HomeScreen from './screens/HomeScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
 import QuizzesScreen from './screens/QuizzesScreen';
 import AccountScreen from './screens/AccountScreen';
-import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
+// import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
