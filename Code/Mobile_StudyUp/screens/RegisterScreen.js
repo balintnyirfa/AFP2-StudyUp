@@ -1,24 +1,42 @@
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View, Image, KeyboardAvoidingView, Pressable, TextInput } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View, Image, KeyboardAvoidingView, Pressable, TextInput, Alert } from 'react-native';
 import { auth } from '../Firebase';
+import { useNavigation } from '@react-navigation/native';
 
-const RegisterScreen = ({navigation}) => {
+const RegisterScreen = () => {
     const [email, setEmail] = useState('');
     //const [text, setName] = useState('');
     const [password, setPassword] = useState('');
     // [passwordAgain, setChangePasswordAgain] = useState('');
 
+    const navigation = useNavigation();
+
     const signUp = (e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          console.log(userCredential);
-          //navigation.navigate(LoginScreen);
-        }).catch((error) => {
-          console.log(error);
-        });
-      }
+            .then((userCredential) => {
+                console.log(userCredential);
+                navigation.navigate("Login");
+            }).catch((error) => {
+                console.log(error);
+                //AlertWindow(error);
+            });
+    }
+
+    const AlertWindow = (error) => {
+        Alert.alert("Hiba", error, [
+            {
+                text: 'Cancel',
+                onPress: () => console.log('Cancel Pressed'),
+                style: 'cancel',
+            },
+            {
+                text: 'OK',
+                onPress: () => console.log('OK Pressed'),
+            },
+        ]);
+    }
 
     return (
         <SafeAreaView style={styles.Container}>
@@ -63,13 +81,13 @@ const RegisterScreen = ({navigation}) => {
                     <Pressable style={styles.LoginButton} onPress={() => navigation.navigate('Login')}>
                         <Text style={styles.LoginButtonText}>MÁR VAN PROFILOM</Text>
                     </Pressable>
-                </TouchableOpacity>  
+                </TouchableOpacity>
             </View>
 
             <View style={styles.BottomContainer}>
-                <Image 
+                <Image
                     source={require('../assets/logo.png')}
-                    style={styles.LogoStyle}/>
+                    style={styles.LogoStyle} />
                 <Text style={styles.BottomText}>A StudyUp-ra való regisztrációval elfogadod a Használati feltételeinket és az Adatvédelmi nyilatkozatunkat.</Text>
             </View>
         </SafeAreaView>
@@ -78,7 +96,7 @@ const RegisterScreen = ({navigation}) => {
 
 export default RegisterScreen
 
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
     Container: {
         flex: 1,
         flexDirection: "column",
@@ -137,7 +155,7 @@ const styles = StyleSheet.create ({
         marginLeft: 'auto',
         marginRight: 'auto'
     },
-    
+
     RegisterButton: {
         width: 350,
         margin: 4,

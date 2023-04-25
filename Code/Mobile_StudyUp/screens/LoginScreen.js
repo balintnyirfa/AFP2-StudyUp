@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { KeyboardAvoidingView, Image, Pressable, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { KeyboardAvoidingView, Image, Pressable, StyleSheet, Text, TextInput, TouchableOpacity, View, Alert } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../Firebase';
 
@@ -7,14 +8,32 @@ const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const navigation = useNavigation();
+
+  const AlertWindow = (error) => {
+    Alert.alert("Hiba", error, [
+      {
+        text: 'Cancel',
+        onPress: () => console.log('Cancel Pressed'),
+        style: 'cancel',
+      },
+      {
+        text: 'OK',
+        onPress: () => console.log('OK Pressed'),
+      },
+    ]);
+  }
+
   const signIn = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      console.log(userCredential);
-    }).catch((error) => {
-      console.log(error);
-    });
+      .then((userCredential) => {
+        console.log(userCredential);
+        //navigation.navigate('Home');
+      }).catch((error) => {
+        console.log(error);
+        //AlertWindow(error);
+      });
   }
 
   return (
@@ -44,17 +63,17 @@ const LoginScreen = () => {
           </Pressable>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Pressable style={styles.passwordForgotButton}>
+          <Pressable style={styles.passwordForgotButton} onPress={() => navigation.navigate('ForgotPassword')}>
             <Text style={styles.passwordForgotButtonText}>ELFELEJTETTEM A JELSZAVAM</Text>
           </Pressable>
         </TouchableOpacity>
       </View>
 
       <View style={styles.bottomContainer}>
-          <Image 
-              source={require('../assets/logo.png')}
-              style={styles.logoStyle}/>
-          <Text style={styles.bottomText}>A StudyUp-ba való bejelentkezéssel elfogadod a Használati feltételeinket és az Adatvédelmi nyilatkozatunkat.</Text>
+        <Image
+          source={require('../assets/logo.png')}
+          style={styles.logoStyle} />
+        <Text style={styles.bottomText}>A StudyUp-ba való bejelentkezéssel elfogadod a Használati feltételeinket és az Adatvédelmi nyilatkozatunkat.</Text>
       </View>
     </KeyboardAvoidingView>
   )
