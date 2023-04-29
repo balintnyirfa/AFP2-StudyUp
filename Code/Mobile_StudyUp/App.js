@@ -18,10 +18,10 @@ const Tab = createBottomTabNavigator();
 function Tabs() {
   return(
     <Tab.Navigator>
-      <Tab.Screen name='Home' component={HomeScreen}/>
-      <Tab.Screen name='Curriculum' component={HomeScreen}/>
-      <Tab.Screen name='Quizzes' component={QuizzesScreen}/>
-      <Tab.Screen name='Profile' component={AccountScreen}/>
+      <Tab.Screen name='Home' component={HomeScreen} options={{ headerShown: false }}/>
+      <Tab.Screen name='Curriculum' component={HomeScreen} options={{ headerShown: false }}/>
+      <Tab.Screen name='Quizzes' component={QuizzesScreen} options={{ headerShown: false }}/>
+      <Tab.Screen name='Profile' component={AccountScreen} options={{ headerShown: false }}/>
     </Tab.Navigator>
   );
 }
@@ -51,7 +51,7 @@ export default function App() {
             },
             headerTintColor: '#8562AC'
           }} />
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Home" component={Tabs} />
         {/* <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen}/> */}
         <Stack.Screen 
           name="Account" 

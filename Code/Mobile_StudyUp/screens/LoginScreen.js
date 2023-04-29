@@ -3,7 +3,8 @@ import { KeyboardAvoidingView, Image, Pressable, StyleSheet, Text, TextInput, To
 import { useNavigation } from '@react-navigation/native';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../Firebase';
-
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
@@ -27,9 +28,11 @@ const LoginScreen = () => {
 
   const signIn = (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, "balint@gmail.com", "asdasd") //Majd visszaírni! Ezt csak az egyszerűség kedvéért hagyom így!
       .then((userCredential) => {
         console.log(userCredential);
+        //const { uid, email } = userCredential.user;
+        //saveUserData(uid, email);
         navigation.reset({
           index: 0,
           routes: [{ name: 'Home' }],

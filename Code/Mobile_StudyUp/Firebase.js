@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDATBpeUnKBRHxYo1yNCtwxtmPrwWyY3gk",
@@ -16,23 +17,4 @@ const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
 
-//const db = getDatabase();
-//const reference = ref(db, 'users/' + userId);
-//
-//set(reference, {
-//  username: username,
-//  email: email,
-//  password: password
-//});
-
-// Initialize Firebase
-//let app;
-//if (firebase.apps.length === 0) {
-//  app = firebase.initializeApp(firebaseConfig);
-//} else {
-//    app = firebase.app()
-//}
-//
-//const auth = firebase.auth()
-//
-//export { auth };
+export const db = getFirestore(app);

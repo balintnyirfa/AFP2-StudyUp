@@ -1,22 +1,27 @@
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View, Image, KeyboardAvoidingView, Pressable, TextInput, Alert } from 'react-native';
-import { auth } from '../Firebase';
+import { auth, db } from '../Firebase';
 import { useNavigation } from '@react-navigation/native';
+import { getFirestore, doc, addDoc, collection, setDoc } from "firebase/firestore";
 
 const RegisterScreen = () => {
     const [email, setEmail] = useState('');
-    //const [text, setName] = useState('');
     const [password, setPassword] = useState('');
-    // [passwordAgain, setChangePasswordAgain] = useState('');
 
     const navigation = useNavigation();
 
+    
     const signUp = (e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                console.log(userCredential);
+        .then((userCredential) => {
+            console.log(userCredential);
+                const newUser = {
+                    uID: userCredential.uID,
+                    email: userCredential.email
+                };
+                addDoc(doc(db, "user"), newUser);
                 navigation.navigate("Login");
             }).catch((error) => {
                 console.log(error);
