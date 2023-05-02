@@ -58,12 +58,12 @@ const AccountScreen = () => {
         </View>
 
         <View style={styles.bottomContainer}>
-          <Text style={styles.text}><b>Email cím:</b> -insert email-{email}</Text>
-          <Text style={styles.text} marginBottom={10} ><b>Kitöltött tesztek száma:</b> {points}</Text>
+          <Text style={styles.text}>Email cím: -insert email-{email}</Text>
+          <Text style={styles.text} marginBottom={10} >Kitöltött tesztek száma: {points}</Text>
 
           <View style={styles.buttonContainer}>
             <Pressable style={styles.saveButton} >
-              <Text style={styles.btnText} onPress={handleSave}>Mentés ⏩ <i>nem biztos, hogy ide kell </i>🤔</Text>
+              <Text style={styles.btnText} onPress={handleSave}>Mentés ⏩ nem biztos, hogy ide kell 🤔</Text>
             </Pressable>
           </View>
         </View>
