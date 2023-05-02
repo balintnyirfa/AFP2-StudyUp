@@ -51,7 +51,7 @@ export default function App() {
             },
             headerTintColor: '#8562AC'
           }} />
-        <Stack.Screen name="Home" component={Tabs} />
+        <Stack.Screen name="Home" component={Tabs} options={{ headerShown:false }}/>
         <Stack.Screen 
           name="Account" 
           component={AccountScreen}
