@@ -28,7 +28,7 @@ const HomeScreen = () => {
         <SafeAreaView style={styles.container}>
             <KeyboardAvoidingView style={styles.container}>
                 <View style={styles.topContainer}>
-                    <Text style={[styles.header, styles.boldText]}>Kezdő oldal</Text>
+                    <Text style={[styles.header, styles.boldText]}>Kezdőoldal</Text>
                     <Text style={styles.regularText}>Fogjunk is bele a tanulásba!</Text>
                 </View>
 
@@ -52,7 +52,7 @@ const HomeScreen = () => {
                     </View>
                     <View style={styles.icons}>
                         <Image
-                            style={styles.cardImage}
+                            style={styles.cardImageInCaseOfLongText}
                             source={require('../assets/star.png')} />
                         <Text style={styles.iconText}>Ingyenes kurzusok</Text>
                     </View>
@@ -73,7 +73,8 @@ const HomeScreen = () => {
                     <Text style={[styles.header, styles.boldText]}>Ajánlott kvízek</Text>
                     <Text style={styles.regularText}>Próbáld ki magad az alábbi kvízek egyikében!</Text>
                     <ScrollView
-                        horizontal='true'>
+                        horizontal='true'
+                        style={{  }}>
                         <Card>
                             <Text>Kvíz 1</Text>
                         </Card>
@@ -120,7 +121,7 @@ const styles = StyleSheet.create({
 
     header: {
         fontSize: 30,
-        paddingTop: 10,
+        paddingTop: 20,
         paddingHorizontal: 15
     },
 
@@ -151,17 +152,27 @@ const styles = StyleSheet.create({
         //borderWidth: 2,
         marginVertical: 5,
         marginHorizontal: 15,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        alignItems: 'center'
     },
 
     iconText: {
         textAlign: 'center',
-        fontSize: 13
+        alignContent: 'center',
+        fontSize: 12
     },
 
     cardImage: {
         height: 50,
-        width: 50
+        width: 50,
+        marginBottom: 10
+    },
+
+    cardImageInCaseOfLongText: {
+        height: 50,
+        width: 50,
+        marginBottom: 10,
+        marginTop: 15
     },
 
     quizContainer: {
