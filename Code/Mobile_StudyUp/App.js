@@ -10,7 +10,7 @@ import HomeScreen from './screens/HomeScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
 import QuizzesScreen from './screens/QuizzesScreen';
 import AccountScreen from './screens/AccountScreen';
-// import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
+import SubjectsScreen from './screens/SubjectsScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -30,7 +30,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen options={{ headerShown: false }} name="Welcome" component={WelcomeScreen} />
+        <Stack.Screen options={{ headerShown: false }} name="Welcome" component={SubjectsScreen} />
         <Stack.Screen 
           name="Login" 
           component={LoginScreen} 
@@ -52,7 +52,6 @@ export default function App() {
             headerTintColor: '#8562AC'
           }} />
         <Stack.Screen name="Home" component={Tabs} />
-        {/* <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen}/> */}
         <Stack.Screen 
           name="Account" 
           component={AccountScreen}
@@ -64,6 +63,7 @@ export default function App() {
             headerTintColor: '#8562AC'
           }} />
         <Stack.Screen name="Quizzes" component={QuizzesScreen} />
+        <Stack.Screen name="Subjects" component={SubjectsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
