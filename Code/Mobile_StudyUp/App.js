@@ -18,7 +18,12 @@ const Tab = createBottomTabNavigator();
 function Tabs() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name='Home' component={HomeScreen} options={{ headerShown: false }} />
+      <Tab.Screen
+        name='Home'
+        component={HomeScreen}
+        options={{
+          headerShown: false          
+        }} />
       {/*<Tab.Screen name='Subjects' component={SubjectsScreen} options={{ headerShown: false }} />*/}
       <Tab.Screen name='Quizzes' component={QuizzesScreen} options={{ headerShown: false }} />
       <Tab.Screen name='Profile' component={AccountScreen} options={{ headerShown: false }} />

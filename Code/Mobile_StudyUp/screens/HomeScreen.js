@@ -26,67 +26,69 @@ const HomeScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <KeyboardAvoidingView style={styles.container}>
-                <View style={styles.topContainer}>
-                    <Text style={[styles.header, styles.boldText]}>Kezdőoldal</Text>
-                    <Text style={styles.regularText}>Fogjunk is bele a tanulásba!</Text>
-                </View>
+            <View style={styles.topContainer}>
+                <Text style={[styles.header, styles.boldText]}>Kezdőoldal</Text>
+                <Text style={styles.regularText}>Fogjunk is bele a tanulásba!</Text>
+            </View>
 
-                <View style={styles.progressContainer}>
-                    <Text style={styles.regularText}>Tekintsd meg, hogy hogyan teljesítesz:</Text>
-                    <Progress.Bar style={styles.progressBar} />
-                </View>
+            <View style={styles.progressContainer}>
+                <Text style={styles.regularText}>Tekintsd meg, hogy hogyan teljesítesz:</Text>
+                <Progress.Bar style={styles.progressBar} />
+            </View>
 
-                <View style={styles.iconsContainer}>
-                    <View style={styles.icons}>
-                        <Image
-                            style={styles.cardImage}
-                            source={require('../assets/star.png')} />
-                        <Text style={styles.iconText}>Kategóriák</Text>
-                    </View>
-                    <View style={styles.icons}>
-                        <Image
-                            style={styles.cardImage}
-                            source={require('../assets/star.png')} />
-                        <Text style={styles.iconText}>Ranglista</Text>
-                    </View>
-                    <View style={styles.icons}>
-                        <Image
-                            style={styles.cardImageInCaseOfLongText}
-                            source={require('../assets/star.png')} />
-                        <Text style={styles.iconText}>Ingyenes kurzusok</Text>
-                    </View>
-                    <View style={styles.icons}>
-                        <Image
-                            style={styles.cardImage}
-                            source={require('../assets/star.png')} />
-                        <Text style={styles.iconText}>Bolt</Text>
-                    </View>
-                    <View style={styles.icons}>
-                        <Image
-                            style={styles.cardImage}
-                            source={require('../assets/star.png')} />
-                        <Text style={styles.iconText}>Egyéb</Text>
-                    </View>
+            <View style={styles.iconsContainer}>
+                <View style={styles.icons}>
+                    <Image
+                        style={styles.categoryCardImage}
+                        source={require('../assets/star.png')} />
+                    <Text style={styles.iconText}>Kategóriák</Text>
                 </View>
-                <View style={styles.quizContainer}>
-                    <Text style={[styles.header, styles.boldText]}>Ajánlott kvízek</Text>
-                    <Text style={styles.regularText}>Próbáld ki magad az alábbi kvízek egyikében!</Text>
-                    <ScrollView
-                        horizontal='true'
-                        style={{  }}>
-                        <Card>
-                            <Text>Kvíz 1</Text>
-                        </Card>
-                        <Card>
-                            <Text>Kvíz 2</Text>
-                        </Card>
-                        <Card>
-                            <Text>Kvíz 3.</Text>
-                        </Card>
-                    </ScrollView>
+                <View style={styles.icons}>
+                    <Image
+                        style={styles.categoryCardImage}
+                        source={require('../assets/star.png')} />
+                    <Text style={styles.iconText}>Ranglista</Text>
                 </View>
-            </KeyboardAvoidingView>
+                <View style={styles.icons}>
+                    <Image
+                        style={styles.categoryCardImageInCaseOfLongText}
+                        source={require('../assets/star.png')} />
+                    <Text style={styles.iconText}>Ingyenes kurzusok</Text>
+                </View>
+                <View style={styles.icons}>
+                    <Image
+                        style={styles.categoryCardImage}
+                        source={require('../assets/star.png')} />
+                    <Text style={styles.iconText}>Bolt</Text>
+                </View>
+                <View style={styles.icons}>
+                    <Image
+                        style={styles.categoryCardImage}
+                        source={require('../assets/star.png')} />
+                    <Text style={styles.iconText}>Egyéb</Text>
+                </View>
+            </View>
+
+            <View style={styles.quizContainer}>
+                <Text style={[styles.header, styles.boldText]}>Ajánlott kvízek</Text>
+                <Text style={styles.regularText}>Próbáld ki magad az alábbi kvízek egyikében!</Text>
+                <ScrollView
+                    horizontal='true'
+                    contentContainerStyle={styles.containerScrollView}>
+                    <Card containerStyle={styles.quizCards}>
+                        <Image 
+                            source={require('../assets/test.jpg')}
+                            style={styles.cardImage}/>
+                        <Text style={styles.cardText}>Kvíz 1</Text>
+                    </Card>
+                    <Card containerStyle={styles.quizCards}>
+                        <Text>Kvíz 2</Text>
+                    </Card>
+                    <Card containerStyle={styles.quizCards}>
+                        <Text>Kvíz 3</Text>
+                    </Card>
+                </ScrollView>
+            </View>
         </SafeAreaView>
     )
 }
@@ -162,13 +164,13 @@ const styles = StyleSheet.create({
         fontSize: 12
     },
 
-    cardImage: {
+    categoryCardImage: {
         height: 50,
         width: 50,
         marginBottom: 10
     },
 
-    cardImageInCaseOfLongText: {
+    categoryCardImageInCaseOfLongText: {
         height: 50,
         width: 50,
         marginBottom: 10,
@@ -178,6 +180,16 @@ const styles = StyleSheet.create({
     quizContainer: {
         flex: 2,
         flexDirection: 'column'
+    },
+
+    containerScrollView: {
+        flexDirection: 'row',
+
+    },
+
+    quizCards: {
+        height: 200,
+        width: 180
     }
 })
 
