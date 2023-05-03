@@ -82,7 +82,7 @@ const HomeScreen = () => {
                             <Text>Kvíz 2</Text>
                         </Card>
                         <Card>
-                            <Text>Kvíz 3</Text>
+                            <Text>Kvíz 3.</Text>
                         </Card>
                     </ScrollView>
                 </View>
