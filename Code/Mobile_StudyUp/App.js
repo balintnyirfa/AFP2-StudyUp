@@ -32,6 +32,15 @@ function Tabs() {
 }
 
 export default function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user);
+    });
+
+    return unsubscribe;
+  }, []);
   return (
     <NavigationContainer>
       <Stack.Navigator>
