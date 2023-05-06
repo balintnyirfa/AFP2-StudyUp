@@ -28,22 +28,28 @@ const AccountScreen = () => {
       setUsername(user.displayName);
       setEmail(user.email);
       setPoints(points);
-      setProfilePic(user.photoURL);   
+      setProfilePic(user.photoURL);
       setNumberCurriculumDone(numberCurriculumDone);
     });
 
     return unsubscribe;
     }, []);
 
-  const handleSave = () => {
-    console.log(`Username: ${username}, Email: ${email}, Points: ${points}, Profile Pic: ${profilePic}`);
-  };
 /*
   const saveProfilePicUri = (userId, uri) => {
     firebase.database().ref(`user/${userId}`).update({
       profilePic: uri,
     });
   }; 
+  */
+
+  /*
+  useEffect(() => {
+    const user = firebase.auth().currentUser;
+    if (user) {
+      setDisplayName(user.displayName);
+    }
+  }, []);
   */
 
   const handlePickImage = async () => {
@@ -66,6 +72,10 @@ const AccountScreen = () => {
     if (!result.canceled) {
       setProfilePic(result.uri);
     }
+  };
+
+  const handleSave = () => {
+    console.log(`Username: ${username}, Email: ${email}, Points: ${points}, Profile Pic: ${profilePic}`);
   };
 
   return (
