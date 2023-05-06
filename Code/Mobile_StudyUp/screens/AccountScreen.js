@@ -1,18 +1,50 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { KeyboardAvoidingView, Image, Pressable, StyleSheet, Text, TextInput, TouchableOpacity, View, Button, Platform } from 'react-native';
 import * as ImagePicker from 'expo-image-picker'
 import { SafeAreaView } from 'react-native-safe-area-context';
+import ReactDOM from "react-dom/client";
+import { auth } from '../Firebase';
+//import firebase from 'firebase/app';
+import 'firebase/database';
+import 'firebase/storage';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 const AccountScreen = () => {
+  const [userId, setUserId] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [points, setPoints] = useState(0);
   const [profilePic, setProfilePic] = useState(null);
   const [numberCurriculumDone, setNumberCurriculumDone] = useState(0);
+  const [userData, setUserData] = useState({});
+
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      user.displayName=user.email.substring(0, user.email.indexOf("@"));
+      setUser(user);
+      setUsername(user.displayName);
+      setEmail(user.email);
+      setPoints(points);
+      setProfilePic(user.photoURL);   
+      setNumberCurriculumDone(numberCurriculumDone);
+    });
+
+    return unsubscribe;
+    }, []);
 
   const handleSave = () => {
     console.log(`Username: ${username}, Email: ${email}, Points: ${points}, Profile Pic: ${profilePic}`);
   };
+/*
+  const saveProfilePicUri = (userId, uri) => {
+    firebase.database().ref(`user/${userId}`).update({
+      profilePic: uri,
+    });
+  }; 
+  */
 
   const handlePickImage = async () => {
     // engedély galériához
@@ -44,26 +76,25 @@ const AccountScreen = () => {
           <View style={{ alignItems: 'center', marginBottom: 10 }}>
             <Image
               style={styles.profilePicture}
-              source={{ uri: profilePic }}
-            />
-            <Text style={styles.usernameText}>-insert username-{username}</Text>
+              source={{ uri: profilePic }}/>
+            <Text style={styles.usernameText}>{username}</Text>
             <Text style={styles.text}>{points} pont</Text>
           </View>
           <View style={styles.buttonContainer}>
             <Pressable style={styles.uploadButton}>
-              {profilePic && <Image source={{ uri: profilePic }} />}
+              {profilePic ? <Image source={{ uri: profilePic }}/> : null}
               <Text style={styles.uploadText} onPress={handlePickImage}>Profilkép feltöltése</Text>
             </Pressable>
           </View>
         </View>
 
         <View style={styles.bottomContainer}>
-          <Text style={styles.text}>Email cím: -insert email-{email}</Text>
-          <Text style={styles.text} marginBottom={10} >Kitöltött tesztek száma: {points}</Text>
+          <Text style={styles.text}>Email cím: {email}</Text>
+          <Text style={styles.text} marginBottom={10}>Kitöltött tesztek száma: {numberCurriculumDone}</Text>
 
           <View style={styles.buttonContainer}>
-            <Pressable style={styles.saveButton} >
-              <Text style={styles.btnText} onPress={handleSave}>Mentés ⏩ nem biztos, hogy ide kell 🤔</Text>
+            <Pressable style={styles.saveButton}>
+              <Text style={styles.btnText} onPress={handleSave}>Mentés</Text>
             </Pressable>
           </View>
         </View>
@@ -114,6 +145,7 @@ const styles = StyleSheet.create({
     padding: 5,
     fontSize: 22,
     color: '#6B6B6B',
+    fontWeight: 'bold'
   },
 
   uploadButton: {
