@@ -17,6 +17,20 @@ import SubjectsScreen from './screens/SubjectsScreen';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
+/*
+const STYLES = ['default', 'dark-content', 'light-content'];
+const [statusBarStyle, setStatusBarStyle] = useState(STYLES[1]);
+
+  const changeStatusBarStyle = () => {
+    const styleId = STYLES.indexOf(statusBarStyle) + 1;
+    if (styleId === STYLES.length) {
+      setStatusBarStyle(STYLES[0]);
+    } else {
+      setStatusBarStyle(STYLES[styleId]);
+    }
+  }; 
+*/
+
 function Tabs() {
   return (
     <Tab.Navigator>
@@ -26,7 +40,7 @@ function Tabs() {
         options={{
           headerShown: false          
         }} />
-      {/*<Tab.Screen name='Subjects' component={SubjectsScreen} options={{ headerShown: false }} />*/}
+      <Tab.Screen name='Subjects' component={SubjectsScreen} options={{ headerShown: false }} />
       <Tab.Screen name='Quizzes' component={QuizzesScreen} options={{ headerShown: false }} />
       <Tab.Screen name='Profile' component={AccountScreen} options={{ headerShown: false }} />
     </Tab.Navigator>
@@ -48,7 +62,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen
           name="Welcome"
-          component={Tabs}
+          component={WelcomeScreen}
           options={{
             headerShown: false
           }} />
