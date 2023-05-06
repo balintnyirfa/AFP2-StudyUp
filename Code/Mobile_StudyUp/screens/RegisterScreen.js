@@ -4,11 +4,15 @@ import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View, Image, Keyboard
 import { auth, db } from '../Firebase';
 import { useNavigation } from '@react-navigation/native';
 import { getFirestore, doc, addDoc, collection, setDoc } from "firebase/firestore";
+import firebase from "firebase/compat/app";
 
 const RegisterScreen = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const [username, setUsername] = useState('');
+    const [points, setPoints] = useState(0);
+    const [profilePic, setProfilePic] = useState(null);
+    const [numberCurriculumDone, setNumberCurriculumDone] = useState(0);
     const navigation = useNavigation();
 
     
@@ -27,6 +31,25 @@ const RegisterScreen = () => {
                 console.log(error);
                 //AlertWindow(error);
             });
+        
+        /*
+        const uid = firebase.auth().currentUser.uid;
+
+        // Új dokumentum létrehozása
+        db.collection('users').doc(uid).set({
+            username: username,
+            email: email,
+            points: points,
+            profilePic: profilePic.uri,
+            numberCurriculumDone: numberCurriculumDone
+        })
+        .then(() => {
+            console.log('Felhasználó dokumentum sikeresen létrehozva');
+        })
+        .catch((error) => {
+            console.error('Hiba történt a dokumentum létrehozása során:', error);
+        });
+        */
     }
 
     const AlertWindow = (error) => {
