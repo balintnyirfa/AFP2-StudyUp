@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { KeyboardAvoidingView, Image, Pressable, StyleSheet, Text, TextInput, TouchableOpacity, View, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { signInWithEmailAndPassword } from 'firebase/auth';
@@ -28,7 +28,7 @@ const LoginScreen = () => {
 
   const signIn = (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth, "balint@gmail.com", "asdasd") //Majd visszaírni! Ezt csak az egyszerűség kedvéért hagyom így!
+    signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
         //const { uid, email } = userCredential.user;
