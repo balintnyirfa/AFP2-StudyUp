@@ -4,7 +4,7 @@ import * as ImagePicker from 'expo-image-picker'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import ReactDOM from "react-dom/client";
 import { auth } from '../Firebase';
-//import firebase from 'firebase/app';
+import { getAuth, updateProfile } from "firebase/auth";
 import 'firebase/database';
 import 'firebase/storage';
 import firebase from 'firebase/compat/app';
@@ -21,9 +21,12 @@ const AccountScreen = () => {
   const [userData, setUserData] = useState({});
 
   const [user, setUser] = useState(null);
+
+  const auth = getAuth();
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
-      user.displayName=user.email.substring(0, user.email.indexOf("@"));
+      user.displayName = user.email.substring(0, user.email.indexOf("@"));
       setUser(user);
       setUsername(user.displayName);
       setEmail(user.email);
@@ -33,24 +36,7 @@ const AccountScreen = () => {
     });
 
     return unsubscribe;
-    }, []);
-
-/*
-  const saveProfilePicUri = (userId, uri) => {
-    firebase.database().ref(`user/${userId}`).update({
-      profilePic: uri,
-    });
-  }; 
-  */
-
-  /*
-  useEffect(() => {
-    const user = firebase.auth().currentUser;
-    if (user) {
-      setDisplayName(user.displayName);
-    }
   }, []);
-  */
 
   const handlePickImage = async () => {
     // engedély galériához
@@ -70,7 +56,14 @@ const AccountScreen = () => {
     });
 
     if (!result.canceled) {
-      setProfilePic(result.uri);
+      setProfilePic(result.uri)
+      /*updateProfile(auth.currentUser, {
+        photoURL: setProfilePic(result.uri)
+      }).then(() => {
+        console.log('Profilkép woohoo');
+      }).catch((error) => {
+        console.log('Profilkép boo')
+      });*/
     }
   };
 
@@ -86,13 +79,13 @@ const AccountScreen = () => {
           <View style={{ alignItems: 'center', marginBottom: 10 }}>
             <Image
               style={styles.profilePicture}
-              source={{ uri: profilePic }}/>
+              source={{ uri: profilePic }} />
             <Text style={styles.usernameText}>{username}</Text>
             <Text style={styles.text}>{points} pont</Text>
           </View>
           <View style={styles.buttonContainer}>
             <Pressable style={styles.uploadButton}>
-              {profilePic ? <Image source={{ uri: profilePic }}/> : null}
+              {profilePic ? <Image source={{ uri: profilePic }} /> : null}
               <Text style={styles.uploadText} onPress={handlePickImage}>Profilkép feltöltése</Text>
             </Pressable>
           </View>
@@ -124,7 +117,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     backgroundColor: '#F5F5F5'
   },
-  
+
   text: {
     textAlign: 'center',
     padding: 5,
@@ -144,9 +137,9 @@ const styles = StyleSheet.create({
   },
 
   profilePicture: {
-    width: 200, 
-    height: 200, 
-    borderRadius: 100, 
+    width: 200,
+    height: 200,
+    borderRadius: 100,
     //marginBottom: 20
   },
 
