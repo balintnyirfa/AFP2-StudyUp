@@ -13,6 +13,7 @@ import HomeScreen from './screens/HomeScreen';
 import QuizzesScreen from './screens/QuizzesScreen';
 import AccountScreen from './screens/AccountScreen';
 import SubjectsScreen from './screens/SubjectsScreen';
+import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -34,12 +35,7 @@ const [statusBarStyle, setStatusBarStyle] = useState(STYLES[1]);
 function Tabs() {
   return (
     <Tab.Navigator>
-      <Tab.Screen
-        name='Home'
-        component={HomeScreen}
-        options={{
-          headerShown: false          
-        }} />
+      <Tab.Screen name='FirstPage' component={HomeScreen} options={{ headerShown: false }} />
       <Tab.Screen name='Subjects' component={SubjectsScreen} options={{ headerShown: false }} />
       <Tab.Screen name='Quizzes' component={QuizzesScreen} options={{ headerShown: false }} />
       <Tab.Screen name='Profile' component={AccountScreen} options={{ headerShown: false }} />
@@ -77,6 +73,17 @@ export default function App() {
             },
             headerTintColor: '#8562AC'
           }} />
+
+        <Stack.Screen
+          name='ForgotPassword'
+          component={ForgotPasswordScreen}
+          options={{
+            title: 'Állítsd vissza a jelszavad',
+            headerStyle: {
+              backgroundColor: '#fff'
+            },
+            headerTintColor: '#8562AC'
+          }}/>
 
         <Stack.Screen
           name="Register"

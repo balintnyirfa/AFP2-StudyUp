@@ -23,7 +23,8 @@ const RegisterScreen = () => {
             console.log(userCredential);
                 const newUser = {
                     uID: userCredential.uID,
-                    email: userCredential.email
+                    email: userCredential.email,
+                    //username: userCredential.username
                 };
                 addDoc(doc(db, "user"), newUser);
                 navigation.navigate("Login");
@@ -76,13 +77,15 @@ const RegisterScreen = () => {
                     onChangeText={setEmail}
                     onChange={(e) => setEmail(e.target.value)}
                 />
-                {/*}
+                
                 <TextInput
                     style={styles.Input}
                     placeholder="Felhasználó név"
-                    value={text}
-                    onChangeText={setChangeUserName}
-                />*/}
+                    value={username}
+                    onChangeText={setUsername}
+                    onChange={(e) => setUsername(e.target.value)}
+                />
+
                 <TextInput
                     style={styles.Input}
                     placeholder="Jelszó"
