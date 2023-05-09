@@ -71,6 +71,19 @@ const AccountScreen = () => {
     console.log(`Username: ${username}, Email: ${email}, Points: ${points}, Profile Pic: ${profilePic}`);
   };
 
+  const handleLogout = () => {
+  auth()
+    .signOut()
+    .then(() => {
+      console.log('User signed out successfully!');
+
+      navigation.navigate('LoginScreen');
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView style={styles.container}>
