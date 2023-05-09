@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { Icon, ListItem } from 'react-native-elements';
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const [leaderboardData, setLeaderboardData] = useState([]);
-
-export default LeaderBoard
+//const [leaderboardData, setLeaderboardData] = useState([]);
 
 const LeaderBoard = () => {
   const [leaderboardData, setLeaderboardData] = useState([]);
