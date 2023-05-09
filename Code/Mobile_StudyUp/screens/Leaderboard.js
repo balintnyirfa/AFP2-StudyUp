@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
 import { Icon, ListItem } from 'react-native-elements';
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useNavigation } from '@react-navigation/native';
 
+const [leaderboardData, setLeaderboardData] = useState([]);
 
 export default LeaderBoard
 
@@ -54,6 +54,8 @@ const LeaderBoard = () => {
     </View>
   );
 };
+
+export default LeaderBoard
 
 const styles = StyleSheet.create({
   container: {
