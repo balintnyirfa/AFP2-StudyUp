@@ -113,6 +113,13 @@ const AccountScreen = () => {
           </View>
         </View>
 
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity>
+            <Pressable style={styles.logoutButton} onPress={handleLogout}>
+              <Text style={styles.logoutText}>Kijelentkezés</Text>
+            </Pressable>
+          </TouchableOpacity>
+        </View>
       </KeyboardAvoidingView>
     </SafeAreaView>
 
