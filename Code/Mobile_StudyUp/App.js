@@ -15,7 +15,7 @@ import AccountScreen from './screens/AccountScreen';
 import SubjectsScreen from './screens/SubjectsScreen';
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 import _proba_quizzes from './screens/_proba_quizzes';
-import LeaderBoard from './screens/LeaderBoard';
+import LeaderBoard from './screens/Leaderboard';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
