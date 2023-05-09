@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet, FlatList, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
 import { Icon, ListItem } from 'react-native-elements';
 import { SafeAreaView } from "react-native-safe-area-context";
-
-const [leaderboardData, setLeaderboardData] = useState([]);
-
-export default LeaderBoard
+import { db, auth } from '../Firebase';
+import { DocumentSnapshot, doc, documentId, getDoc, query, collection, getDocs } from 'firebase/firestore'; 
 
 const LeaderBoard = () => {
     const [leaderboardData, setLeaderboardData] = useState([]);
@@ -53,6 +51,8 @@ const LeaderBoard = () => {
         </View>
     );
 };
+
+export default LeaderBoard
 
 const styles = StyleSheet.create({
         container: {
