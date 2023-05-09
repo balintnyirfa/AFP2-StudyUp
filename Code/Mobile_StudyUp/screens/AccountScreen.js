@@ -72,7 +72,7 @@ const AccountScreen = () => {
   };
 
   const handleLogout = () => {
-    auth().signOut().then(() => {
+    auth.signOut().then(() => {
       console.log('User signed out successfully!');
 
       navigation.navigate('LoginScreen');
