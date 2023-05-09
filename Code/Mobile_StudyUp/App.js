@@ -15,6 +15,7 @@ import AccountScreen from './screens/AccountScreen';
 import SubjectsScreen from './screens/SubjectsScreen';
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 import _proba_quizzes from './screens/_proba_quizzes';
+import LeaderBoard from './screens/LeaderBoard';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -38,6 +39,7 @@ const [statusBarStyle, setStatusBarStyle] = useState(STYLES[1]);
         <Tab.Screen name='FirstPage' component={HomeScreen} options={{ headerShown: false }} />
         <Tab.Screen name='Subjects' component={_proba_quizzes} options={{ headerShown: false }} />
         <Tab.Screen name='Quizzes' component={QuizzesScreen} options={{ headerShown: false }} />
+        <Tab.Screen name='Leaderboard' component={LeaderBoard} options={{ headerShown: false }} />
         <Tab.Screen name='Profile' component={AccountScreen} options={{ headerShown: false }} />
       </Tab.Navigator>
     );
@@ -119,6 +121,9 @@ export default function App() {
         <Stack.Screen
           name="Quizzes"
           component={QuizzesScreen} />
+        <Stack.Screen
+          name="Leaderboard"
+          component={LeaderBoard} />
         <Stack.Screen
           name="Subjects"
           component={SubjectsScreen} />
