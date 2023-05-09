@@ -72,9 +72,7 @@ const AccountScreen = () => {
   };
 
   const handleLogout = () => {
-  auth()
-    .signOut()
-    .then(() => {
+    auth().signOut().then(() => {
       console.log('User signed out successfully!');
 
       navigation.navigate('LoginScreen');
@@ -82,7 +80,7 @@ const AccountScreen = () => {
     .catch((error) => {
       console.log(error);
     });
-};
+  };
 
   return (
     <SafeAreaView style={styles.container}>
