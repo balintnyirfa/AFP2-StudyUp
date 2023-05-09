@@ -53,3 +53,36 @@ const LeaderBoard = () => {
         </View>
     );
 };
+
+const styles = StyleSheet.create({
+        container: {
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#f2f2f2',
+        },
+        item: {
+          flexDirection: 'row',
+          alignItems: 'center',
+          padding: 10,
+          marginVertical: 5,
+          backgroundColor: '#fff',
+          borderRadius: 5,
+        },
+        itemRank: {
+          flex: 1,
+          alignItems: 'center',
+        },
+        itemDetails: {
+          flex: 4,
+        },
+        itemName: {
+          fontWeight: 'bold',
+        },
+        itemScore: {
+          color: 'gray',
+        },
+        itemIcon: {
+          flex: 1,
+        }
+    });
