@@ -125,6 +125,23 @@ const RegisterScreen = () => {
     )
 }
 
+const validateInputs = () => {
+    if (email.trim() === '') {
+      Alert.alert('Error', 'Email cannot be empty.');
+      return false;
+    }
+    if(username.trim() === ''){
+        Alert.alert('Error', 'Username cannot be empty.');
+        return false;
+    }
+    if(password.trim() === ''){
+        Alert.alert('Error', 'Password cannot be empty.')
+        return false;
+    }
+
+    return true;
+};
+
 export default RegisterScreen
 
 const styles = StyleSheet.create({
