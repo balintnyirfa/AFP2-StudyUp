@@ -16,7 +16,7 @@ import SubjectsScreen from './screens/SubjectsScreen';
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 import _proba_quizzes from './screens/_proba_quizzes';
 import LeaderBoard from './screens/LeaderBoard';
-import Quiz from './screens/TakingQuizScreen'
+import TakingQuizScreen from './screens/TakingQuizScreen'
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -61,8 +61,21 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
       <Stack.Screen
-          name="TakingQuiz"
-          component={Quiz}
+          name="Home"
+          component={Tabs}
+          options={{
+            headerShown: false
+          }}
+          />
+        <Stack.Screen
+          name="proba"
+          component={_proba_quizzes}
+          options={{
+            headerShown: false
+          }} />
+        <Stack.Screen
+          name="TakingQuizScreen"
+          component={TakingQuizScreen}
           options={{
             headerShown: false
           }} />
@@ -94,19 +107,7 @@ export default function App() {
             headerTintColor: '#8562AC'
           }} />
  
-        <Stack.Screen
-          name="Home"
-          component={Tabs}
-          options={{
-            headerShown: false
-          }}
-          />
-        <Stack.Screen
-          name="proba"
-          component={_proba_quizzes}
-          options={{
-            headerShown: false
-          }} />
+        
         <Stack.Screen
           name="Account"
           component={AccountScreen}
