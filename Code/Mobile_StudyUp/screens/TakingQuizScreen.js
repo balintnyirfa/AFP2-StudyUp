@@ -242,7 +242,7 @@ const TakingQuizScreen = () => {
                            padding: 20,
                            alignItems: 'center'
                        }}>
-                           <Text style={{fontSize: 30, fontWeight: 'bold'}}>{ score> (allQuestions.length/2) ? 'Congratulations!' : 'Oops!' }</Text>
+                           <Text style={{fontSize: 30, fontWeight: 'bold'}}>{ score> (allQuestions.length/2) ? 'Ügyes vagy, csak így tovább!' : 'Hát van még mit tanulni...' }</Text>
 
                            <View style={{
                                flexDirection: 'row',
