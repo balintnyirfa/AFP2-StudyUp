@@ -4,9 +4,19 @@ import { DocumentSnapshot, doc, documentId, getDoc, query, collection, getDocs }
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { KeyboardAvoidingView } from 'react-native';
 import { db, auth } from '../Firebase';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import Quiz from './TakingQuizScreen'
 
 
-const _proba_quizzes = () => {
+const _proba_quizzes = ({navigation}) => {
+
+    const handleQuizPress = () => {
+      /*navigation.reset({
+        index: 0,
+        routes: [{ name: 'TakingQuizScreen' }],
+      });*/
+      navigation.navigate('TakingQuizScreen');
+    };
 
     const [quizzes, setQuizzes] = useState([]);
     async function list() {
@@ -69,11 +79,11 @@ const _proba_quizzes = () => {
                 <Text onPress={list}> List quizzes </Text>
                 <Text>      </Text>
                 {quizzes.map((quiz) => (
-                    <View key={quiz.id}>
-                        <Text>Quiz id: {quiz.id}</Text>
-                        <Text>Quiz name: {quiz.name}</Text>
+                    <TouchableOpacity key={quiz.id}>
+                        <Text>Quiz id: {quiz.id} </Text>
+                        <Text onPress={() => handleQuizPress(quiz)}>Quiz name: {quiz.name}</Text>
                         <Text>Quiz category: {quiz.category}</Text>
-                    </View>
+                    </TouchableOpacity>
                 ))}
                 </View>
             </KeyboardAvoidingView>
