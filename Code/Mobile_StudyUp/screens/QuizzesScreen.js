@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, FlatList, TouchableOpacity, StyleSheet, KeyboardAvoidingView } from 'react-native';
+import { FlatList, KeyboardAvoidingView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { DocumentSnapshot, doc, documentId, getDoc, query, collection, getDocs } from 'firebase/firestore';
+import firestore from 'firebase/compat/firestore';
+import { db, auth } from '../Firebase';
+import TakingQuizScreen from './TakingQuizScreen';
 
 const quizzes = [
   { id: 1, category: 'Matematika', title: 'Algebra' },
@@ -10,14 +14,52 @@ const quizzes = [
   { id: 6, category: 'Történelem', title: 'I. világháború' },
 ];
 
-const QuizzesScreen = () => {
+async function list1() {
+  const q = query(collection(db, "quizzes"));
+
+  const querySnapshot = await getDocs(q);
+  const listing = querySnapshot.forEach((doc) => {
+      console.log(doc.id, " => ", doc.data());
+      
+  });
+  return listing;
+}
+
+function list2() {
+  db.collection('quizzes').get().then(snapshot => {
+    snapshot.docs.forEach();
+  })
+
+  firestore()
+  .collection('quizzes')
+  .get()
+  .then(querySnapshot => {
+    console.log('Total quizzes: ', querySnapshot.size);
+
+    querySnapshot.forEach(documentSnapshot => {
+      console.log('Quiz id: ', documentSnapshot.id, documentSnapshot.data());
+    });
+  });
+}
+
+
+const QuizzesScreen = ({navigation}) => {
   const [selectedCategory, setSelectedCategory] = useState('');
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity style={{ padding: 10 }}>
+    <TouchableOpacity style={{ padding: 10 }} onPress={handleQuizPress}>
       <Text>{item.title}</Text>
     </TouchableOpacity>
   );
+
+  const handleQuizPress = () => {
+    /*navigation.reset({
+      index: 0,
+      routes: [{ name: TakingQuizScreen }],
+    });
+    */
+    navigation.navigate('TakingQuizScreen');
+  };
 
   const handleCategoryPress = (category) => {
     setSelectedCategory(category);
