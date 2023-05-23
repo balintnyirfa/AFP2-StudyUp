@@ -46,7 +46,7 @@ const HomeScreen = () => {
                 <View style={styles.icons}>
                     <Image
                         style={styles.categoryCardImage}
-                        source={require('../assets/star.png')} />
+                        source={require('../assets/leaderboard.png')} />
                     <Text style={styles.iconText}>Ranglista</Text>
                 </View>
                 <View style={styles.icons}>
@@ -58,13 +58,13 @@ const HomeScreen = () => {
                 <View style={styles.icons}>
                     <Image
                         style={styles.categoryCardImage}
-                        source={require('../assets/star.png')} />
+                        source={require('../assets/bolt.png')} />
                     <Text style={styles.iconText}>Bolt</Text>
                 </View>
                 <View style={styles.icons}>
                     <Image
                         style={styles.categoryCardImage}
-                        source={require('../assets/star.png')} />
+                        source={require('../assets/egyeb.png')} />
                     <Text style={styles.iconText}>Egyéb</Text>
                 </View>
             </View>
