@@ -40,7 +40,7 @@ const HomeScreen = () => {
                 <View style={styles.icons}>
                     <Image
                         style={styles.categoryCardImage}
-                        source={require('../assets/star.png')} />
+                        source={require('../assets/tantargyak.png')} />
                     <Text style={styles.iconText}>Kategóriák</Text>
                 </View>
                 <View style={styles.icons}>
@@ -52,7 +52,7 @@ const HomeScreen = () => {
                 <View style={styles.icons}>
                     <Image
                         style={styles.categoryCardImageInCaseOfLongText}
-                        source={require('../assets/star.png')} />
+                        source={require('../assets/homepage.png')} />
                     <Text style={styles.iconText}>Ingyenes kurzusok</Text>
                 </View>
                 <View style={styles.icons}>
