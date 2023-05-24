@@ -6,6 +6,7 @@ Bejelentkezés:
 |-----------|---------|---------|----------|-------|
 | Rossz input esetén | 05.24 | Ne engedje tovább a felhasználót | Bejelentkezési felületen marad | Nem találtam |
 | Megfelelő input esetén | 05.24 | Kezdőlapra kerül a felhasználó | Bejelentkezik az oldalra | Nem találtam |
+| Üres inputok esetén | 05.24 | Nem engedi tovább a felhasználót | Hiba üzenetet kap a felhasználó | Nem találtam |
 
 Regisztráció:
 
